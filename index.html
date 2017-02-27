@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>	
+<title>Новости</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link href="css/style.css" rel="stylesheet"  type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+	
+	<div class="reclame">
+		<a href="#"><img src="images/reclame.png" alt="Реклама" title="Реклама" /></a>
+	</div>
+	<div class="container">
+		<div class="head w100 left">
+		<!--*************************logo*************************-->
+			<div class="logo left">
+				<a href="#"><img src="images/logo.png" alt="логотип BelNews" title="логотип" /></a>
+			</div>
+		<!--*************************search*************************-->	
+			<div class=" search left">
+				<form method="get" action="/search" target="_blank">
+					<input name="q" id="form-query" value="" placeholder="поиск по сайту">
+					<input src="images/search.png" type="image"/>
+				</form>
+		<!--*************************login*************************-->	
+			</div>
+			<div class=" login left">
+				 <form action="login.html">
+   					<p>
+   						<button> <img src="images/forma.png" alt="Вход" >Вход</button>
+   					</p>
+ 				 </form>
+			</div>
+		<!--*************************weather*************************-->		
+			<div class=" weather right ">
+				<div id='meteoprog-informer' style='width:104px; height:29px;'>
+					<a href='http://www.meteoprog.by/ru/weather/Minsk/'>Минск</a>
+				</div>
+				<script>
+					url='http://www.meteoprog.by/ru/informers/weather-now.html?cities%5B%5D=Minsk&background=ffffff&textcolor=000000&linkcolor=2b85ca&width=100&avatar=0';
+					key1='6b8f3dc90ead99e6e1d715b4719f794afb65820f';
+					key2='292c8a3706ab8423543e9fe80a48b5e00e696fbc';
+					var script = document.createElement('script');
+					script.src = 'http://www.meteoprog.by/js/new_design/weather-informer.js';
+					document.body.appendChild(script);
+				</script>
+			</div>
+		</div>
+		<!--*************************menu*************************-->
+		<div class="menu 	right">
+			
+				<ul>
+					<li><a href="#"> Главная</a></li>
+					<li><a href="#"> В мире</a></li>
+					<li><a href="#"> Политика</a></li>
+					<li><a href="#"> Спорт</a></li>
+					<li><a href="#"> Наука</a></li>
+					<li><a href="#"> Еще</a>
+						<div class="background">
+							<ul>
+								<li><a href="#"> Бизнес</a></li>
+								<li><a href="#"> Технология</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			
+			
+		</div>
+		<!--*************************filter*************************-->
+		<div class="filter 	left">
+			<ul>
+				<li><a href="#"> Фильтр</a>
+					<div>
+						<ul>
+							<p>Автор</p>
+							<li><p><input type="checkbox" name="a" value="1"> 1</p></li>
+							<li><p><input type="checkbox" name="a" value="2"> 2</p></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--*************************blok news*************************-->
+		<div class="blok left">
+			<!--*************blok***********-->
+			<div class="blok-1 left">	
+				<a href="review.html"><img src="images/h1.jpeg" alt="новость" title=""/></a>
+				<a href="review.html"><h1>Прыгнули в Европу: юные белоруски о переезде, кебабах, «луках», польской молодежи и выходе за рамки</h1></a>
+					<div class="autor-blok-1">Автор: Петя</div>
+					<div class="date-blok-1">26.02.2017</div>
+				<p>Люблин входит в десятку самых удобных для студентов городов Европы, и пускай рейтинги обычно врут, этот город действительно создает впечатление юного и беззаботного. Onliner.by закрывает цикл материалов о Люблинщине беседой с белорусками, уехавшими учиться в местный вуз и считающими, что мир должен быть большим и открытым.</p>
+			</div >
+				
+			<div class="blok-2 left">		
+				<a href="review.html"><img src="images/h2.jpeg" alt="новость" title=""/></a>
+				<a href="review.html"><h2>Прыгнули в Европу: юные белоруски о переезде, кебабах, «луках», польской молодежи и выходе за рамки</h2></a>
+					<div class="autor-blok-2">Автор: Петя</div>
+					<div class="date-blok-2">26.02.2017</div>
+				<p>Египет решил почти в 2,5 раза увеличить стоимость въездных виз с 1 марта: в обнародованном решении МИД АРЕ указывается, что «стоимость въездных виз повышается с $25 до $60». Но потом резко передумал.</p>
+			</div >
+
+			<div class="blok-3 left">		
+				<a href="review.html"><img src="images/h2-2.jpeg" alt="новость" title=""/></a>
+				<a href="review.html"><h2>Зима, уходи! Фоторепортаж с задорных масленичных гуляний под Минском</h2></a>
+					<div class="autor-blok-3">Автор: Петя</div>
+					<div class="date-blok-3">26.02.2017</div>
+				<p>Сегодня будто бы сама природа определялась с порой года. Светило яркое весеннее солнышко, валил снег — в общем, отличная погода для того, чтобы устроить проводы зимы. Под Минском в Национальном музее народной архитектуры и быта демонстрировали масленичные обряды, кормили блинами и, конечно, сжигали чучело. </p>
+			</div >
+		</div>
+		<!--*************min-blok***********-->
+		<div class="min-blok left">
+
+			<div class="min-blok-1 left">		
+				<a href="review.html"><p>Сегодня будто бы сама природа определялась с порой года. Светило яркое весеннее солнышко, валил снег — в общем, отличная погода для того, чтобы устроить проводы зимы.</p></a>
+					<div class="autor-blok-1">Автор: Петя</div>
+					<div class="date-blok-1">26.02.2017</div>
+			</div >
+
+			<div class="min-blok-2 left">		
+				<a href="review.html"><p>Сегодня будто бы сама природа определялась с порой года. Светило яркое весеннее солнышко, валил снег — в общем, отличная погода для того, чтобы устроить проводы зимы.</p></a>
+					<div class="autor-min-blok-2">Автор: Петя</div>
+					<div class="date-min-blok-2">26.02.2017</div>
+			</div >
+
+			<div class="min-blok-3 left">		
+				<a href="review.html"><p>Сегодня будто бы сама природа определялась с порой года. Светило яркое весеннее солнышко, валил снег — в общем, отличная погода для того, чтобы устроить проводы зимы.</p></a>
+					<div class="autor-min-blok-3">Автор: Петя</div>
+					<div class="date-min-blok-3">26.02.2017</div>
+			</div >
+
+			<div class="min-blok-4 left">		
+				<a href="review.html"><p>Сегодня будто бы сама природа определялась с порой года. Светило яркое весеннее солнышко, валил снег — в общем, отличная погода для того, чтобы устроить проводы зимы.</p></a>
+					<div class="autor-min-blok-4">Автор: Петя</div>
+					<div class="date-min-blok-4">26.02.2017</div>
+			</div >
+
+		</div>
+		<!--*************line-blok***********-->
+		<div class="line-blok left">
+
+			<div class="line-blok-1 left">		
+				<a href="review.html"><img src="images/line-blok-1.jpeg" alt="новость" title=""/></a>
+				<a href="review.html"><h2>В Минске прошел праздник ко Дню защитника Отечества. Спецподразделение ГАИ показало свой новый BMW 3-Series</h2></a>
+					<div class="autor-line-blok-1">Автор: Петя</div>
+					<div class="date-line-blok-1">26.02.2017</div>
+				<p>Сегодня в Минске на территории аквапарка «Лебяжий» прошло праздничное мероприятие, посвященное Дню защитника Отечества. Внутренние войска МВД продемонстрировали свою новейшую экипировку, а сотрудники спецподразделения УГАИ МВД «Стрела» показали новый автомобиль — BMW 3-Series.</p>
+			</div >
+
+			<div class="line-blok-2 left">		
+				<a href="#"><img src="images/line-blok-2.jpeg" alt="новость" title=""/></a>
+				<a href="#"><h2>Белорусы показали на выставке в ОАЭ противодроновую винтовку</h2></a>
+					<div class="autor-line-blok-2">Автор: Петя</div>
+					<div class="date-line-blok-2">26.02.2017</div>
+				<p>Новую противодроновую винтовку показали белорусские конструкторы на выставке IDEX 2017 в ОАЭ. Оружие предназначено для «глушения» или полного вывода из строя миниатюрных разведывательных беспилотников, а также различных коммерческих мультикоптеров.</p>
+			</div >
+
+			<div class="line-blok-3 left">		
+				<a href="#"><img src="images/line-blok-3.jpeg" alt="новость" title=""/></a>
+				<a href="#"><h2>LG похвасталась смартфоном X power2 — работает три дня без подзарядки</h2></a>
+					<div class="autor-line-blok-3">Автор: Петя</div>
+					<div class="date-line-blok-3">26.02.2017</div>
+				<p>Компания LG анонсировала смартфон X power2, ориентированный на любителей игр и помешанных на мультимедийном контенте. С учетом технических характеристик первое утверждение выглядит несколько спорным, а вот при просмотре видео, судя по всему, новинка действительно продержится дольше, чем в среднем по индустрии.</p>
+			</div >
+
+			<div class="line-blok-4 left">		
+				<a href="#"><img src="images/line-blok-4.jpeg" alt="новость" title=""/></a>
+				<a href="#"><h2>Впервые я снял в клипе родителей, они вызвались сэкономить сыну денег». Макс Корж выпустил новый душевный клип о малом, который повзрослел</h2></a>
+					<div class="autor-line-blok-4">Автор: Петя</div>
+					<div class="date-line-blok-4">26.02.2017</div>
+				<p>В конце прошлого года Макс Корж записал четвертый студийный альбом, который назвал «Малый повзрослел». Романтика городских окраин, ностальгия по 90-м — альбом местами получился очень стилевым. Сегодня Корж опубликовал видео на титульную композицию: продолжение пубертатной истории о водке в машине, подростковых рейвах и драках. </p>
+			</div >
+		</div>
+		<!--*************************reclame-blok *************************-->
+		<div class="reclama-blok right">
+
+			<div class="reclama-blok-1 right">		
+				<a href="#"><img src="images/reklama.jpg" alt="новость" title=""/></a>
+			</div >
+
+			<div class="reclama-blok-2 right">		
+				<a href="#"><img src="images/reklama-2.jpg" alt="новость" title=""/></a>
+			</div >
+			
+		</div>
+		<!--*************************pagination*************************-->
+		<div class="pagination">
+			  <a href="#">&laquo;</a>
+			  <a href="#">1</a>
+			  <a href="#">2</a>
+			  <a href="#">3</a>
+			  <a href="#">4</a>
+			  <a href="#">5</a>
+			  <a href="#">6</a>
+			  <a href="#">&raquo;</a>
+		</div>
+<!--*************************footer*************************-->
+		<div class="footer right">
+		<!--*************************menu*************************-->
+			<div class="menu-footer 	right">
+			
+				<ul>
+					<li><a href="#"> Главная</a></li>
+					<li><a href="#"> В мире</a></li>
+					<li><a href="#"> Политика</a></li>
+					<li><a href="#"> Спорт</a></li>
+					<li><a href="#"> Наука</a></li>
+					
+				</ul>
+			</div>
+			<!--*************************socseti*************************-->
+			<div class="socseti right">
+				<ul>
+					<li><a href="#"><img src="images/vk.png" alt="Вконтакте" title="Вконтакте"/></a></li>
+					<li><a href="#"><img src="images/facebook.png" alt="facebook" title="facebook"/></a></li>
+					<li><a href="#"><img src="images/Instagram.png" alt="Instagram" title="Instagram"/></a></li>
+				</ul>
+				
+				<span><p>belnews@info.by</p></span>
+			</div>
+			<!--*************************logo-footer*************************-->
+			
+			<div class="logo-footer left">
+				<a href="#"><img src="images/logo.png" alt="логотип BelNews" title="логотип" /></a>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<div class="background-footer right">	
+		
+	</div>	
+	<div class="date left">
+		<p>25.02.2017г</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+</body> 
+   </html>

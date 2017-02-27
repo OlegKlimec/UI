@@ -1,0 +1,452 @@
+	.left{
+		float:left;
+	}
+
+	.right{
+		float:right;
+	}
+
+	.bg-r {
+		background:red;
+	}
+
+	.bg-g {
+		background:green;
+	}
+
+	.bg-b {
+		background:blue;
+	}
+
+
+
+
+	.w100 {
+		width:100%;
+	}
+
+
+/**********container*************/
+
+	.container {
+		width:940px;
+		margin:0px auto;
+		/*background:red;	*/
+	}
+/**********reclame*************/
+	.reclame a img{
+		width:100%;
+		margin:0px auto;
+		background:red;	
+	}
+/**********logo*************/
+	.logo {
+		width:150px;
+		margin:20px;
+	}
+
+	.logo a img{
+		width:150px;
+		margin:20px;
+	}
+/**********search*************/
+	.search {
+		width:410px;
+		margin:32px;
+	}
+
+	.search input:first-child {
+		width:345px;
+		height: 25px;
+		margin:9px;
+	}
+
+	.search input:last-child {
+		width:30px;
+		height: 30px;
+		margin: 10px 0 -10px 0;
+	}
+/**********weather*************/
+	.weather {	
+		margin:45px 0 0 0;
+	}
+
+/**********login*************/
+	.login {
+		width:100px;
+		margin:20px;
+
+	}
+
+
+	.login form p button img {
+		width:15px;
+		height: 15px;
+		margin:0px 10px 0 5px;
+	}
+
+	.login form p button {
+		width:100px;
+		height: 35px;
+		margin:20px 10px 0 5px;
+		cursor: pointer;
+	}
+/**********menu*************/
+	.menu{
+		width:940px;
+		margin:0px auto;
+		/*background:green;	*/
+	}
+
+	.menu {
+		width:940px;
+		min-height:60px;
+		float:left;
+		border: 1px solid rgba(206, 203, 203, 0.63);
+		background: gainsboro;
+	}
+
+	.menu ul {
+		margin:20px 0 0 0px;
+		float:left;
+		width:100%;
+	}
+
+	.menu ul li{
+		float:left;
+		margin: 0px 20px 0px 0px;
+		position:relative;
+		display: block;
+	}
+
+	.menu ul li a {
+		/*background:red;*/
+		text-decoration:none;
+		/*text-transform:uppercase;*/
+		padding:5px 10px;
+		font-family:tahoma;
+		font-size:15px;
+		color:rgba(0, 0, 0, 0.79);
+		font-weight:bold;
+	}
+
+	.menu ul li:first-child a{
+		color:blue;
+	}
+
+	.menu ul li a:hover {
+		/*background:#cecbcb;*/
+		color:#315efb;
+		/*border-bottom:1px solid #3b69e7;*/
+		font-weight:bold;
+		
+	}
+
+	.menu ul li:hover div {
+		display:block;
+		
+	}
+
+	.menu ul li div {
+		position:absolute;
+	       /* top: -43px;*/
+	    left: -40px;
+	    display: none; 
+	    padding: 0px 0 0 0;
+	    background: gainsboro;
+	}
+
+	.menu ul li ul {
+		width: 130px;
+    	min-height: 100px;
+				
+	}
+
+	.menu ul li ul li {
+		float:none;
+		width:100%;
+		
+	}
+
+	.menu ul li ul li  a {
+		display:inline-block;
+		width:100%;
+		text-align:center;
+		padding:10px 0px;
+		margin:0px 0px 3px 0px;
+	}
+/**********text*************/
+
+	
+	.text{
+		width:100%;
+
+
+	}
+
+	.text  h1{
+		width:100%;
+		font-weight:bold;
+		font-size: 25px;
+		text-align: center;
+	margin:20px 0px 20px 0px;
+	}
+
+	
+
+	.text img {
+		width:100%;
+		margin:0px 0px 0px 0px;
+	}
+		
+	.text p {
+		text-align: justify;
+		margin:20px 0px 20px 0px;
+		font-size: 20px;
+		line-height: 1.625;
+	}
+
+	
+
+
+
+
+
+
+/**********footer*************/
+	.background-footer {
+		width: 100%;
+		height: 120px;
+		background:#626262;
+		margin: 10px 0 0px 0px;
+
+	}
+
+	.footer{
+		width: 940px;
+		height: 120px;
+		/*text-align: center;*/
+		/*display: inline-block;*/
+		 margin: 9px 0 -129px 0px;
+    	/* background: green; */
+    	position: relative;
+	}
+	
+
+	.menu-footer {
+		width:525px;
+		min-height:60px;
+		float:left;
+	}
+
+	.menu-footer ul {
+		margin:30px 0 0 0px;
+		float:left;
+		width:100%;
+	}
+
+	.menu-footer ul li{
+		float:left;
+		margin: 0px 20px 0px 0px;
+		position:relative;
+		display: block;
+	}
+
+	.menu-footer ul li a {
+		text-decoration:none;
+		padding:5px 10px;
+		font-family:tahoma;
+		font-size:15px;
+		color:#ffffff;
+		
+	}
+
+	/*.menu-footer ul li:first-child a{
+		color:blue;
+	}*/
+
+	.menu-footer ul li a:hover {
+		/*background:#cecbcb;*/
+		color:#FFF;
+		/*border-bottom:1px solid #3b69e7;
+		font-weight:bold;*/
+		text-decoration:underline;
+	}
+
+	.menu-footer ul li:hover div {
+		display:block;
+		
+	}
+
+	.menu-footer ul li div {
+		position:absolute;
+	    top: -43px;
+	    left: -40px;
+	    display: none;
+	    padding: 50px 0 0 0;
+	}
+
+	.menu-footer ul li ul {
+		width:200px;
+		min-height:200px;
+				
+	}
+
+	.menu-footer ul li ul li {
+		float:none;
+		width:100%;
+		
+	}
+
+	.menu-footer ul li ul li  a {
+		display:inline-block;
+		width:100%;
+		text-align:center;
+		padding:10px 0px;
+		margin:0px 0px 3px 0px;
+	}
+/**********footer date*************/
+	.date{
+		margin: -18px 0 0px 7px;
+	}
+	
+	.date p{
+		color: #000;
+		margin: 0px 0 0px 0px;
+	}
+/**********footer socseti*************/
+	.socseti{
+		width:215px;
+		height:35px;
+		
+		margin: 15px 0 0px 0px;
+	}
+
+	.socseti p{
+		margin: 50px 65px 0px 4px;
+	}
+	.socseti ul li{
+		float:left;
+		margin: 0px 20px 0px 0px;
+		position:relative;
+		display: block;
+	}
+
+	.socseti ul li a img{
+		/*background:red;*/
+		width:35px;
+		height:35px;
+		
+	}
+
+	.socseti span{
+		/*background:red;*/
+		text-align: center;
+		margin: 3px 0px 0px 0px;
+			
+		}
+/**********footer logo*************/		
+	.logo-footer {
+		width:100%;
+		margin: 36px 0 0 0;
+		
+		text-align: center;
+		display: inline-block;
+	}
+
+	.logo-footer a img{
+		width:70px;
+		
+	}
+
+
+@media all and (min-width:540px) and (max-width:939px) {
+	
+	.container {
+		width:100%;
+	}
+	
+	.reclame{
+		width:100%;
+		margin:10px 0px;
+	}
+	
+	.logo {
+		width:100%;
+		margin:10px 0px;
+		text-align: center;
+
+	}
+	
+	.search {
+		width:310px;
+		margin:35px;
+	}
+
+	.search input:first-child {
+		width:250px;
+		height: 25px;
+		margin:9px;
+	}	
+
+	.search, .login {
+		margin:10px 2%;
+		text-align: center;
+	}
+
+
+	.menu{
+		width:100%;
+		margin:0px auto;
+			
+	}
+
+	.login form p button {
+		width:100px;
+		height: 35px;
+		margin:-10px 10px 0 5px;
+	}
+
+
+	.weather {
+		margin:25px 0 0 0;
+	}
+
+	
+}
+
+
+@media all and (min-width:240px) and (max-width:539px) {
+	
+	.container {
+		width:100%;
+	}
+	/******logo******/	
+	.logo{
+		width:100%;
+		text-align: center;
+		margin:10px 0px;
+
+	}
+
+	.logo a img{
+		width:100px;
+		height: 25px;
+	}
+
+	/******search******/	
+	.search, .login {
+		width:100%;
+		margin:3px 0px;
+		text-align: center;
+	}
+	/******weather******/	
+	.weather {
+		display: none;
+	}
+	
+
+}
+
+
+

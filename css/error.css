@@ -1,0 +1,31 @@
+
+
+	.container {
+		width:940px;
+		margin:0px auto;
+		/*background:red;	*/
+	}
+
+	.logo a img{
+		width:130px;
+		height: 40px;
+		margin:0px 0 0 0;
+		position: absolute;
+	}
+
+	.text-error {
+		width:940px;
+		height: 40px;
+		text-align: center;
+		display: inline-block;
+		font-family: tahoma;
+	}
+
+	.text-error h1 {
+		font-weight: bold;
+		font-size: 25px;
+	}
+
+	.text-error p{
+		font-size: 20px;
+	}
