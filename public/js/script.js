@@ -1,302 +1,325 @@
-
-/****************************************************************************************************/
-                  /*добавить новость в список DOM*/
-/****************************************************************************************************/
-var articlesService = (function () {
-  var articles = [
-      { /*0*/
-        'id': '1',
-        'title': 'Прыгнули в Европу: юные белоруски о переезде, кебабах, «луках», польской молодежи и выходе за рамки',
-        'summary': 'Люблин входит в десятку самых удобных для студентов городов Европы, и пускай рейтинги обычно врут, этот город действительно создает впечатление юного и беззаботного. ',
-        'createdAt': new Date('2012-04-04T24:00:00'),//+
-        'author': 'Автор: Петя',//+
-        'content': 'Люблин входит в десятку самых удобных для студентов городов Европы'
-       },
-
-       { /*1*/
-      	'id': '2',
-        'title': 'Египет решил почти в 2,5 раза увеличить стоимость въездных виз с 1 марта',
-        'summary': 'Египет решил почти в 2,5 раза увеличить стоимость въездных виз с 1 марта: в обнародованном решении МИД АРЕ указывается, что «стоимость въездных виз повышается с $25 до $60». Но потом резко передумал.',
-        'createdAt': new Date('2011-04-04T24:00:00'),//+
-        'author': 'Автор: Петя',//+
-        'content': 'Петя'
-       },
-
-      { /*2*/
-      	'id': '3',
-        'title': 'Зима, уходи! Фоторепортаж с задорных масленичных гуляний под Минском',
-        'summary': 'Сегодня будто бы сама природа определялась с порой года. Светило яркое весеннее солнышко, валил снег — в общем, отличная погода для того, чтобы устроить проводы зимы. ',
-        'createdAt': new Date('2010-04-04T24:00:00'),//+
-        'author': 'Автор: Петя',//+
-        'content': ''       }
-     
+ 
+var user = 'Климец О.Ю.';
+var globalID = 23;
 
 
-    ];
-   
+var itemm = {
+  id: '21',
+  title: 'Удивительные снимки',
+  summary: 'Удивительные снимки, сделанные при помощи космического аппарата «Розетта» (Rosetta), демонстрируют присутствие геологических форм, напоминающих дюны, на поверхности кометы Чурюмова-Герасименко.',
+  createdAt: new Date('2015-01-26T23:00:00'),
+  author: 'Иванов А.В.',
+  content: 'Удивительные снимки, сделанные при помощи космического аппарата «Розетта» (Rosetta), демонстрируют присутствие геологических форм, напоминающих дюны, на поверхности кометы Чурюмова-Герасименко. Ученые из лаборатории Laboratoire de Physique et Mécanique des Milieux Hétérogènes (CNRS/ESPCI Paris/UPMC/Université Paris Diderot) проанализировали доступные снимки и произвели моделирование выделения газов с поверхности кометы, чтобы объяснить наблюдаемые явления. Исследователи показали, что большая разница в давлениях газов между освещенной и неосвещенной солнечными лучами сторонами кометы приводит к формированию ветров, способных переносить частицы пыли и формировать дюны.',
 
-/****************************************************************************************************/
-                 /*получить статью из массива articles с определенным id.*/
-/****************************************************************************************************/
+};
+var itemmm = {
+  id: '22',
+  title: 'Удивительные снимки, сделанные',
+  summary: 'Удивительные снимки, сделанные при помощи космического аппарата «Розетта» (Rosetta), демонстрируют присутствие геологических форм, напоминающих дюны, на поверхности кометы Чурюмова-Герасименко.',
+  createdAt: new Date('2017-01-26T23:00:00'),
+  author: 'Иванов А.В.',
+  content: 'Удивительные снимки, сделанные при помощи космического аппарата «Розетта» (Rosetta), демонстрируют присутствие геологических форм, напоминающих дюны, на поверхности кометы Чурюмова-Герасименко. Ученые из лаборатории Laboratoire de Physique et Mécanique des Milieux Hétérogènes (CNRS/ESPCI Paris/UPMC/Université Paris Diderot) проанализировали доступные снимки и произвели моделирование выделения газов с поверхности кометы, чтобы объяснить наблюдаемые явления. Исследователи показали, что большая разница в давлениях газов между освещенной и неосвещенной солнечными лучами сторонами кометы приводит к формированию ветров, способных переносить частицы пыли и формировать дюны.',
+ 
+};
 
-	function getArticles(skip, top, filterConfig) {
-		var sortArticles = articles.sort(function(a, b) {
-		    return b.createdAt - a.createdAt;
-		});
-
-		    return sortArticles.slice(skip, top);
-	}
-
-
-/****************************************************************************************************/
-   /*проверить объект articles на валидность: присутствие всех обязательных полей в нужном формате.
-  articlesService -enter - article   
-/****************************************************************************************************/
-
-
-	function validateArticle (article) {
-	        if 
-	        	(article.id.length==0 || article.title.length==0 || article.summary.length==0 ||
-
-	        	article.createdAt.length==0 || article.author.length==0  || article.content.length==0 
-
-	          ) 
-	        {
-	          return true;
-	        }
-	}
-	  
-
-/****************************************************************************************************/
-/*добавить новую статью в массив articles, вернуть true если статья добавлена успешно, иначе false.*/
-/****************************************************************************************************/
-	function addArticle (article){
-		articles.push ([{
-		    
-		    id: '4',
-		    title: 'Предприниматели выбрали лучший регион для ведения бизнеса.',
-		    summary: 'Исследования «Лучший регион Беларуси для ведения бизнеса индивидуальными предпринимателями» РОО «Перспектива» проводит с 2009 года, собирая статистику и проводя анкетирование представителей малого бизнеса. ',
-		    createdAt: new Date(''),
-		    author: 'Автор: Петя',
-		    content: 'hhhh'
-
-		}]);
-
-		var add = articles[key];
-			for (var key in add) 
-			{
-		  
-				if (add[key].length==0)
-				   	{
-				    //  console.log  ("Заполните:" +  key + ' ' + "в массиве articles id:" + ' ' + addArticle.id);
-				       {
-				          return false;
-				        }
-				    }
-
-				else 
-				    {
-				       {
-				          return true;
-				        }
-
-				    }
-			}
-	}
-
-
-/****************************************************************************************************/
-                  /*удалить статью по id из массива*/
-/****************************************************************************************************/
-	function removeArticle(id) {
-		var remove = articles.splice(function(a, b) {
-	    
-	    return b.id - a.id;
-
-	  });
-		
-	removeArticle(id)
-	 // return remove.slice(skip, top);
-	}
-
-
-/****************************************************************************************************/
-                  /*изменить статью в массиве articles по id.*/
-/****************************************************************************************************/
-
-	function editArticle(id, article){
-	editArticle('1', { title: 'newTitle', content: 'newContent' })
-
-	}
-
+htmlController.init();
+var globalData = {
+  skip: 0,
+  top: 0,
+  filterConfig: null,
+  masArticles: articleController.articles
+};
+function addArticle(article) {
+  articleController.addArticle(article);
+//   localStorage.setItem('articles', JSON.stringify(articleController.articles));
   
-/****************************************************************************************************/
-       
-/****************************************************************************************************/ 
-	function getArticles(skip, top, filterConfig) {
-		return articles;
-	}
+  var articles = articleController.getArticles(globalData.skip, globalData.top, globalData.filterConfigfilterConfig);      
+  htmlController.renderArticles(articles);
+  
+}
 
-	function addArticle(article) {
-		articles.push(article);
-	}
+function removeArticle(id) {
+  articleController.removeArticle(id);
+//   localStorage.setItem('articles', JSON.stringify(articleController.articles));
+  
+  var articles = articleController.getArticles(globalData.skip, globalData.top, globalData.filterConfigfilterConfig); 
+  htmlController.renderArticles(articles);
+}
+function editArticle(id, article) {
+  articleController.editArticle(id, article);
+//   localStorage.setItem('articles', JSON.stringify(articleController.articles));
+  
+  var articles = articleController.getArticles(globalData.skip, globalData.top, globalData.filterConfigfilterConfig);      
+  htmlController.renderArticles(articles);
+}
 
-	function removeArticle(id){
-		articles.splice(id);
-	}
+function changeUser(nameUser) {
+  htmlController.changeUser(nameUser);
+}
 
-	return {
-		getArticles: getArticles,
-		addArticle: addArticle,
-		removeArticle: removeArticle,
-	};
+function showFilter() {
+  document.getElementById('news-filter').style.right = '0px';
+  document.getElementById('overlay').style.display = 'block';
+}
 
-							/*----------------------------------*/
-                  						/*5 задание*/
-							/*----------------------------------*/
+function hideFilter() {
+  document.getElementById('news-filter').style.right = '-250px';
+  document.getElementById('overlay').style.display = 'none';
+}
 
-/****************************************************************************************************/
-                 			 /*добавить новость в список DOM*/
-/****************************************************************************************************/ 
+function addNews() {
+  document.getElementById('news-part').style.display = 'none';
+  document.getElementById('edit-news-container').style.display = 'none';
+  document.getElementById('add-news-container').style.display = 'block';
+  document.getElementById('add-news-name-author-input').value = user;
+  document.getElementById('add-news-date-input').value =  new Date();
+  document.getElementById('add-news-id-input').value =  '' + globalID;
+}
 
-var articleRenderer = (function () {
-    var ARTICLE_TEMPLATE;
-    var ARTICLE_LIST_NODE;
+function addNewButton () {
+  var newItem = {
+    author: '' + document.getElementById('add-news-name-author-input').value,
+    id: '' + document.getElementById('add-news-id-input').value,
+    createdAt: new Date(document.getElementById('add-news-date-input').value),
+    title: '' + document.getElementById('add-news-title-input').value,
+    summary: '' + document.getElementById('add-news-summary-input').value,
+    content: '' + document.getElementById('add-news-content-input').value
+  }
+  globalID++;
+  addArticle(newItem);
+  document.getElementById('news-part').style.display = 'block';
+  document.getElementById('add-news-container').style.display = 'none';
+}
 
-    function init() {
-        /* DOM Загрузился.
-           Можно найти в нем нужные элементы и сохранить в переменные */
-        ARTICLE_TEMPLATE = document.querySelector('.blok');
-        ARTICLE_LIST_NODE = document.querySelector('.article-list');
+
+document.getElementById('overlay').addEventListener('click', hideFilter);
+
+
+var pagination = (function () {
+    var ITEMS_PER_PAGE = 10; // статей на 1-ой странице
+    var total; // всего статей
+    var currentPage; // текущая страница
+    var showMoreButton;
+    var showMoreCallback; // функция, которую вызывать, когда произошел клик по кнопке
+
+    
+    function init(_total, _showMoreCallback) {
+        currentPage = 1;
+        total = _total;
+        showMoreCallback = _showMoreCallback;
+        showMoreButton = document.getElementById('show-more-button');
+        showMoreButton.addEventListener('click', handleShowMoreClick);
+
+
+        showOrHideMoreButton();
+
+
+        return getParams();
     }
 
-	function insertArticlesInDOM(articles) {
-        /* для массива объектов статей получим соотвествующие HTML элементы */
-        var articlesNodes = renderArticles(articles);
-        /* вставим HTML элементы в '.article-list' элемент в DOM. */
-        articlesNodes.forEach(function (node) {
-            ARTICLE_LIST_NODE.appendChild(node);
-        });
+    function handleShowMoreClick() {
+        var paginationParams = nextPage();
+        showMoreCallback(paginationParams.skip, paginationParams.top);
     }
 
-/****************************************************************************************************/
-                  /*Удаление узлов: removeChild DOM*/
-/****************************************************************************************************/ 
- 	function removeArticlesFromDom () {
-        ARTICLE_LIST_NODE.innerHTML = '';
+    function getTotalPages() {
+        return Math.ceil(total / ITEMS_PER_PAGE);
     }
 
+    function nextPage() {
 
-    function renderArticles(articles) {
-        /* каждый объект article из массива преобразуем в HTML элемент */
-        return articles.map(function (article) {
-            return renderArticle(article);
-        });
+        currentPage = currentPage + 1;
+        ITEMS_PER_PAGE = ITEMS_PER_PAGE;
+
+        showOrHideMoreButton();
+         
+        return getParams();
     }
 
-
-    function renderArticle(article) {
-        /*
-         Используем template из DOM, заполним его данными конкретной статьи - article.
-       
-        */
-        var template = ARTICLE_TEMPLATE;
-        template.content.querySelector('.article-list-item').dataset.id = article.id;
-        template.content.querySelector('.article-list-item-title').textContent = article.title;
-        template.content.querySelector('.article-list-item-summary').textContent = article.summary;
-        template.content.querySelector('.article-list-item-author').textContent = article.author;
-        template.content.querySelector('.article-list-item-date').textContent = formatDate(article.createdAt);
-
-        /*
-         Склонируем полученный контент из template и вернем как результат
-        */
-        return template.content.querySelector('.article-list-item').cloneNode(true);
+    function getParams() {
+       globalData.skip = (currentPage - 1) * ITEMS_PER_PAGE;
+       globalData.top = ITEMS_PER_PAGE;
+        return {
+            top: ITEMS_PER_PAGE,
+            skip: (currentPage - 1) * ITEMS_PER_PAGE
+        };
     }
 
-    /* Date -> 16/05/2015 09:50 */
-    function formatDate(d) {
-        return d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear() + ' ' +
-            d.getHours() + ':' + d.getMinutes();
+    function showOrHideMoreButton() {
+        showMoreButton.hidden = getTotalPages() <= currentPage;
     }
 
     return {
+        init: init
+    }
+
+}());
+
+
+document.addEventListener('DOMContentLoaded', startApp);
+
+var articleNow;
+var articleListNode = document.querySelector('.news-left-part');
+articleListNode.addEventListener('click', handleDeleteBtnClick);
+function handleDeleteBtnClick(event) {
+    if (event.target.className === 'news-delete') {
+        var articleNodeToDelete = event.target.parentElement.parentElement.parentElement;
+        var dateFilter = articleNodeToDelete.childNodes[1].childNodes[1].innerHTML;
+            
+        for (var i = 0; i < articleController.articles.length; i++) {
+            if (dateFilter === htmlController.formatDate(articleController.articles[i].createdAt)) {
+                articleNow = articleController.articles[i];
+            }
+        }
+        removeArticle(articleNow.id);
+    }
+    else {
+        if (event.target.className === 'news-edit') {
+            var articleNodeToEdit = event.target.parentElement.parentElement.parentElement;
+            document.getElementById('news-part').style.display = 'none';
+            document.getElementById('edit-news-container').style.display = 'block';
+            
+            var dateFilter = articleNodeToEdit.childNodes[1].childNodes[1].innerHTML;
+            
+            for (var i = 0; i < articleController.articles.length; i++) {
+                if (dateFilter === htmlController.formatDate(articleController.articles[i].createdAt)) {
+                    articleNow = articleController.articles[i];
+                }
+            }
+            document.getElementById('edit-news-date-input').value = articleNow.createdAt;
+            document.getElementById('edit-news-id-input').value =  '' + articleNow.id;
+            document.getElementById('edit-news-title-input').value =  '' + articleNow.title;
+            document.getElementById('edit-news-name-author-input').value =  '' + articleNow.author;
+            document.getElementById('edit-news-summary-input').value =  '' + articleNow.summary;
+            document.getElementById('edit-news-content-input').value =  '' + articleNow.content;
+        }
+        else {
+            if (event.target.className === 'read-post-button') {
+                document.getElementById('news-part').style.display = 'none';
+                document.getElementById('full-news-container').style.display = 'block';
+                var articleNodeToDelete = event.target.parentElement.parentElement;
+                var dateFilter = articleNodeToDelete.childNodes[1].childNodes[1].innerHTML;
+                for (var i = 0; i < articleController.articles.length; i++) {
+                    if (dateFilter === htmlController.formatDate(articleController.articles[i].createdAt)) {
+                        articleNow = articleController.articles[i];
+                    }
+                }
+                document.getElementById('full-news-date-p').textContent = htmlController.formatDate(articleNow.createdAt);
+                document.getElementById('full-news-title-p').textContent =  '' + articleNow.title;
+                document.getElementById('full-news-author-p').textContent =  '' + articleNow.author;
+                document.getElementById('full-news-speech-p').textContent =  '' + articleNow.content;
+            }
+        }
+    }
+}
+
+function editNews (){
+    articleNow.title = document.getElementById('edit-news-title-input').value;
+    articleNow.content = document.getElementById('edit-news-content-input').value;
+    articleNow.summary = document.getElementById('edit-news-summary-input').value;
+    editArticle(articleNow.id, articleNow);
+    document.getElementById('news-part').style.display = 'block';
+    document.getElementById('edit-news-container').style.display = 'none';
+}
+
+function editButtonFromFull() {
+    document.getElementById('full-news-container').style.display = 'none';
+    document.getElementById('edit-news-container').style.display = 'block';
+    document.getElementById('edit-news-date-input').value = articleNow.createdAt;
+    document.getElementById('edit-news-id-input').value =  '' + articleNow.id;
+    document.getElementById('edit-news-title-input').value =  '' + articleNow.title;
+    document.getElementById('edit-news-name-author-input').value =  '' + articleNow.author;
+    document.getElementById('edit-news-summary-input').value =  '' + articleNow.summary;
+    document.getElementById('edit-news-content-input').value =  '' + articleNow.content;
+}
+
+function deleteButtonFromFull() {
+    document.getElementById('full-news-container').style.display = 'none';
+    removeArticle(articleNow.id);
+    document.getElementById('news-part').style.display = 'block';
+
+}
+
+
+var filter = (function () {
+    var form;
+    var submitButton;
+    var filterChangedCallback;
+    function init(_filterChangedCallback) {
+        form = document.forms.filter;
+        submitButton = form.elements.submit;
+        submitButton.addEventListener('click', handleSubmitClick);
+        filterChangedCallback = _filterChangedCallback;
+        return getFilter();
+    }
+    function getFilter() {
+        var objectNow = {
+            author: undefined,
+            fromDate: undefined,
+            toDate: undefined
+        };
+        var authorSelect = form.elements.author;
+        if (authorSelect.value ) {
+            objectNow.author = authorSelect.value;
+        }
+        else {
+            delete objectNow.author;
+        }   
+       if (form.elements.dateFrom.value ) {
+           objectNow.fromDate = new Date(form.elements.dateFrom.value);
+       }
+       else {
+            delete objectNow.fromDate;
+       }  
+       if (form.elements.dateTo.value ) {
+           objectNow.toDate = new Date (form.elements.dateTo.value);
+       }
+       else {
+            delete objectNow.toDate;
+       }  
+       return objectNow;
+    }
+    function handleSubmitClick() {
+        return filterChangedCallback(getFilter());
+    }
+    return {
         init: init,
-        insertArticlesInDOM: insertArticlesInDOM,
-        removeArticlesFromDom: removeArticlesFromDom
+        getFilter: getFilter
     };
 }());
 
-/*
-    Функция startApp вызовется, когда браузер полностью загрузит и распарсит исходный HTML (index.html)
-    DOMContentLoaded – означает, что все DOM-элементы разметки уже созданы,
-    можно их искать, вешать обработчики, создавать интерфейс, но при этом, возможно,
-    ещё не догрузились какие-то картинки или стили.
-*/
-document.addEventListener('DOMContentLoaded', startApp);
-
-
 function startApp() {
-     /* DOM Загрузился.
-       Можно найти в нем нужные элементы и сохранить в переменные */
-    articleRenderer.init();
-    /* Нарисуем статьи из массива GLOBAL_ARTICLES в DOM */
-   renderArticles();
+    
+
+
+
+   
+   htmlController.init();
+   
+    var filterConfig = filter.init(renderArticlesWithFilterConfig);
+    globalData.filter = filterConfig;
+
+    renderArticlesWithFilterConfig(filterConfig);
+
+    function renderArticlesWithFilterConfig(filterConfig) {
+        htmlController.removeArticlesFromDom();
+        var total = articleController.getArticlesCount(filterConfig);
+        var paginationParams = pagination.init(total, function (skip, top) {
+            renderArticles(skip, top, filterConfig);
+        });
+        renderArticles(paginationParams.skip, paginationParams.top, filterConfig);
+    }
+
+
+    function renderArticles(skip, top, filterConfig) {
+        var articles = articleController.getArticles(skip, top, filterConfig);
+        htmlController.renderArticles(articles);
+    }
 }
 
-/* Глобальная Функция для проверки. Свяжет модель и отображения */
-function renderArticles(skip, top) {
-    // 1. Удалим статьи из HTML
-    articleRenderer.removeArticlesFromDom();
-
-    // 2. Достанем статьи из модели
-    var articles = articleModel.getArticles(skip, top);
-
-    // 3. Отобразим статьи
-    articleRenderer.insertArticlesInDOM(articles);
-}
-
-
-
-  
-
-})();
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-/*var div = document.createElement('div');
-div.className = "blok";
-div.innerHTML = "<p>Люблин входит в десятку самых удобных для студентов городов Европы, и пускай рейтинги обычно врут, этот город действительно создает впечатление юного и беззаботного. Onliner.by закрывает цикл материалов о Люблинщине беседой с белорусками, уехавшими учиться в местный вуз и считающими, что мир должен быть большим и открытым.</p>";
-function createAlertDomNode () {
-  var div = document.createElement('div');
-  div.classList.add('blok');
-  div.innerHTML = '<p>Люблин входит в десятку самых удобных для студентов городов Европы, и пускай рейтинги обычно врут, этот город действительно создает впечатление юного и беззаботного. Onliner.by закрывает цикл материалов о Люблинщине беседой с белорусками, уехавшими учиться в местный вуз и считающими, что мир должен быть большим и открытым.</p>'
-  return div;
-}*/
-
-/*var blok = createAlertDomNode();
-document.body.appendChild(blok);
-
-var minblok  = createAlertDomNode();
-minblok.classList.add('min-blok ');
-document.blokody.appendChild(minblok );*/
-
-
-/*setTimeout(function() {
-    document.body.removeChild(minblok);
-}, 1000);
-
-
-
-}*/

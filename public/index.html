@@ -22,14 +22,14 @@
 				<a href="#"><img src="images/logo.png" alt="логотип BelNews" title="логотип" /></a>
 			</div>
 		<!--*************************search*************************-->	
-			<div class=" search left">
+			<div class="search left">
 				<form method="get" action="/search" target="_blank">
 					<input name="q" id="form-query" value="" placeholder="поиск по сайту">
 					<input src="images/search.png" type="image"/>
 				</form>
 		<!--*************************login*************************-->	
 			</div>
-			<div class=" login left">
+			<div class="login left">
 				 <form action="login.html">
    					<p>
    						<button> <img src="images/forma.png" alt="Вход" >Вход</button>
@@ -87,8 +87,8 @@
 			</ul>
 		</div>
 		<!--*************************blok news*************************-->
-		<div class="blok left">
-			<!--*************blok***********-->
+		<!--<div class="blok left">
+			<!--*************blok***********
 			<div class="blok-1 left">	
 				<a href="review.html"><img src="images/h1.jpeg" alt="новость" title=""/></a>
 				<a href="review.html"><h1>Прыгнули в Европу: юные белоруски о переезде, кебабах, «луках», польской молодежи и выходе за рамки</h1></a>
@@ -111,10 +111,10 @@
 					<div class="autor-blok-3">Автор: Петя</div>
 					<div class="date-blok-3">26.02.2017</div>
 				<p>Сегодня будто бы сама природа определялась с порой года. Светило яркое весеннее солнышко, валил снег — в общем, отличная погода для того, чтобы устроить проводы зимы. Под Минском в Национальном музее народной архитектуры и быта демонстрировали масленичные обряды, кормили блинами и, конечно, сжигали чучело. </p>
-			</div >
-		</div>
+			</div >-->
+		<!--</div>-->
 		<!--*************min-blok***********-->
-		<div class="min-blok left">
+		<!--<div class="min-blok left">
 
 			<div class="min-blok-1 left">		
 				<a href="review.html"><p>Сегодня будто бы сама природа определялась с порой года. Светило яркое весеннее солнышко, валил снег — в общем, отличная погода для того, чтобы устроить проводы зимы.</p></a>
@@ -140,9 +140,9 @@
 					<div class="date-min-blok-4">26.02.2017</div>
 			</div >
 
-		</div>
+		</div>-->
 		<!--*************line-blok***********-->
-		<div class="line-blok left">
+		<!--<div class="line-blok left">
 
 			<div class="line-blok-1 left">		
 				<a href="review.html"><img src="images/line-blok-1.jpeg" alt="новость" title=""/></a>
@@ -175,8 +175,268 @@
 					<div class="date-line-blok-4">26.02.2017</div>
 				<p>В конце прошлого года Макс Корж записал четвертый студийный альбом, который назвал «Малый повзрослел». Романтика городских окраин, ностальгия по 90-м — альбом местами получился очень стилевым. Сегодня Корж опубликовал видео на титульную композицию: продолжение пубертатной истории о водке в машине, подростковых рейвах и драках. </p>
 			</div >
-		</div>
+		</div>-->
 		<!--*************************reclame-blok *************************-->
+
+
+		<body>
+    <header id="qwerty">
+        <p class="picture"><img class="picture-header" src="../moqups/img/SpNews.png"></p>
+        <div class="container-user-add">
+            <p class="enter-add" onclick="addNews()">
+                <img id="enter-add" src="../moqups/img/add.png"></img>
+            </p>
+            <p class="enter-user">
+                <img id="enter-user" src="../moqups/img/user.png"></img>
+            </p>
+            <p class="enter-user" onclick="showFilter()">
+                <img src="../moqups/img/filter.png" class="filter-icon"></img>
+            </p>
+        </div>
+        <div class="clear-block"></div>
+    </header>
+
+    <div class="news-container" id="news-part">
+        <div class="news-left-part" >
+            <div class="clear-block"></div>
+        </div>
+        <div class="clear-block"></div>
+        <div class="show-more-button" id="show-more-button">
+            <p>Загрузить еще</p>
+        </div>
+    </div>
+
+    <template id="template-article-list-item">
+        <div class="news-item">
+            <div class="news-data">
+                <p class="news-data"></p>
+            </div>
+            <div class="news-clamping">
+                <div class="news-subtitle">
+                    <a class="news-link"></a>
+                </div>
+                <div class="news-speech"></div>
+            </div>
+            <!--<div class="news-tags">
+                <p class="tags"></p>
+            </div>-->
+            <div class="news-author-delete-edit">
+                <p class="news-author"></p>
+                <button class="read-post-button" >Подробнее</button>
+                <p class="delete">
+                    <img class="news-delete" src="../moqups/img/delete.png"></img>
+                </p>
+                <p class="edit">
+                    <img class="news-edit" src="../moqups/img/edit.png"></img>
+                </p>
+                <div class="clear-block"></div>
+            </div>
+        </div>
+        </div>
+    </template>
+
+
+
+
+    <div id="add-news-container">
+        <p class="new-news">Добавить новость</p>
+        <div class="add-news-id">
+            <p class="add-news-id-p">
+                ID:
+            </p>
+            <input type="text" name="add-id" id="add-news-id-input" disabled> 
+        </div>
+        <div class="add-news-title">
+            <p class="add-news-title-p">
+                Заголовок:
+            </p>
+            <input type="text" name="add-title" id="add-news-title-input" required placeholder="Заголовок" maxlength="100"> 
+        </div>
+        <div class="add-news-name-author">
+            <p class="add-news-name-author-p">
+                Имя автора:
+            </p>
+            <input type="text" name="add-author" id="add-news-name-author-input" disabled> 
+        </div>
+        <div class="add-news-date">
+            <p class="add-news-date-p">
+                Дата и время добавления:
+            </p>
+            <input type="text" name="add-date" id="add-news-date-input" disabled> 
+        </div>
+        <div class="add-news-summary">
+            <p class="add-news-summary-p">
+                Краткое описание:
+            </p>
+            <input type="text" name="add-summaty" id="add-news-summary-input" required placeholder="Краткое описание" maxlength="200"> 
+        </div>
+         <div class="add-news-content">
+            <p class="add-news-content-p">
+                Текст:
+            </p>
+            <input type="text" name="add-content" id="add-news-content-input" required placeholder="Текст"> 
+        </div>
+        <div class="button-container-add-news">
+                <button type="button" class="add-news-button" onclick="addNewButton()">Добавить</button>
+        </div>
+        <div class="clear-block"></div>
+        
+    </div>
+
+
+
+    <div id="edit-news-container">
+        <p class="new-news">Редактировать новость</p>
+        <div class="edit-news-id">
+            <p class="edit-news-id-p">
+                ID:
+            </p>
+            <input type="text" name="edit-id" id="edit-news-id-input" disabled> 
+        </div>
+        <div class="edit-news-title">
+            <p class="edit-news-title-p">
+                Заголовок:
+            </p>
+            <input type="text" name="edit-title" id="edit-news-title-input" required placeholder="Заголовок" maxlength="100"> 
+        </div>
+        <div class="edit-news-name-author">
+            <p class="edit-news-name-author-p">
+                Имя автора:
+            </p>
+            <input type="text" name="edit-author" id="edit-news-name-author-input" disabled> 
+        </div>
+        <div class="edit-news-date">
+            <p class="edit-news-date-p">
+                Дата и время добавления:
+            </p>
+            <input type="text" name="edit-date" id="edit-news-date-input" disabled> 
+        </div>
+        <div class="edit-news-summary">
+            <p class="edit-news-summary-p">
+                Краткое описание:
+            </p>
+            <input type="text" name="edit-summaty" id="edit-news-summary-input" required placeholder="Краткое описание" maxlength="200"> 
+        </div>
+         <div class="edit-news-content">
+            <p class="edit-news-content-p">
+                Текст:
+            </p>
+            <input type="text" name="edit-content" id="edit-news-content-input" required placeholder="Текст"> 
+        </div>
+        <div class="button-container-edit-news">
+                <button type="button" class="edit-news-button" onclick="editNews()" id="edit-button">Редактировать</button>
+        </div>
+        <div class="clear-block"></div>
+        
+    </div>
+
+
+    <div class="full-news-container" id="full-news-container">
+        <div class="full-news-date">
+            <p class="full-news-date-p" id="full-news-date-p"></p>
+        </div>
+        <div class="full-news-title">
+            <p class="full-news-title-p" id="full-news-title-p"></p>
+        </div>
+        <div class="full-news-speech">
+            <p class="full-news-speech-p" id="full-news-speech-p"></p>
+        </div>
+        <div class="full-news-author">
+            <p class="full-news-author-p" id="full-news-author-p"></p>
+        </div>
+        <div class="full-button-container-delete-news" >
+            <button type="button" class="full-delete-news-button" id="full-delete-news-button" onclick="deleteButtonFromFull()">Удалить</button>
+        </div>
+        <div class="full-button-container-edit-news">
+             <button type="button" class="full-edit-news-button" id="full-edit-news-button" onclick="editButtonFromFull()">Редактировать</button>
+        </div>
+        
+    </div>
+
+
+    <footer>
+        <p class="footer">kubitskivlad@mail.ru</p>
+        <p class="footer">Кубицкий Владислав Олегович</p>
+        <p class="footer">27.02.97</p>
+    </footer>
+
+    <template id="template-article-list-item">
+        <div class="news-item">
+            <div class="news-data">
+                <p class="news-data"></p>
+            </div>
+            <div class="news-clamping">
+                <div class="news-subtitle">
+                    <a class="news-link"></a>
+                </div>
+                <div class="news-speech"></div>
+            </div>
+            <!--<div class="news-tags">
+                <p class="tags"></p>
+            </div>-->
+            <div class="news-author-delete-edit">
+                <p class="news-author"></p>
+                <button class="read-post-button">Подробнее</button>
+                <p class="delete">
+                    <img class="news-delete" src="../moqups/img/delete.png"></img>
+                </p>
+                <p class="edit">
+                    <img class="news-edit" src="../moqups/img/edit.png"></img>
+                </p>
+                <div class="clear-block"></div>
+            </div>
+        </div>
+        </div>
+    </template>
+
+    <!-- forms -->
+    <div class="filter">
+        <form class="news-filter" id="news-filter" name="filter">
+            <p class="news-filter-title">Фильтр</p>
+            <p class="news-filter-author">По имени автора:</p>
+            <input type="text" name="author" class="news-filter-input" placeholder="Петров А.Г.">
+            <p class="news-filter-data">С:</p>
+            <input type="date" name="dateFrom" class="news-filter-input" placeholder="12.07.43">
+            <p class="news-filter-month">По:</p>
+            <input type="date" name="dateTo" class="news-filter-input" placeholder="02">
+            <p class="news-filter-tags">По тегам</p>
+            <input type="test" name="tags" class="news-filter-input" placeholder="#Belarus #Minsk">
+            <div class="button-container">
+                <button type="button" onclick="hideFilter()">Отмена</button>
+            </div>
+            <input name="submit" type="button" value="Применить"></input>
+        </form>
+    </div>
+
+    <div id="overlay"></div>
+
+		   <!-- templates -->
+    <template id="template-article-item">
+	     <article>
+	        <div class="article-list-item" data-id="id">
+	            <h3 class="article-list-item-title">
+	                Заголовок статьи
+	            </h3>
+		        <div class="text-right">
+					<h1>Предприниматели выбрали лучший регион для ведения бизнеса. На первом месте — Минск, на последнем — Могилевская область</h1>
+					<img src="images/review.jpeg" alt="редприниматели выбрали лучший регион " title=""/>
+					<p>
+						Исследования «Лучший регион Беларуси для ведения бизнеса индивидуальными предпринимателями» РОО «Перспектива» проводит с 2009 года, собирая статистику и проводя анкетирование представителей малого бизнеса. При подготовке исследования внимание обращается на удельный вес и темп прироста розничного товарооборота ИП на рынках и в торговых центрах региона, количество предпринимателей в расчете на тысячу жителей и налоговые поступления от их деятельности в региональном разрезе. Также учитывается число магазинов ИП, торговых объектов и мест на рынках и в торговых центрах в расчете на тысячу жителей и другие показатели.
+						</br>
+						</br>
+						Исходя из совокупности показателей, лучшим регионом для ведения бизнеса ИП признан Минск (хотя по результатам опроса предпринимателей он занимает только пятое место). На втором месте — Брестская область, на третьем — Гомельская, на четвертом — Гродненская. Пятое и шестое место, соответственно, за Минской и Витебской областью. Аутсайдером стала Могилевская область.
+						</br>
+						</br>
+						Как отмечают представители РОО «Перспектива», основные выводы исследования сводятся к следующему: кризисные проявления в экономике, отсутствие конструктивной политики властей в части определения роли и перспектив развития ИП вызывают дальнейшую стагнацию этого сектора, что неизбежно приведет к увеличению безработицы из-за разорения предпринимателей, сужению ширины и глубины ассортимента товаров на потребительском рынке, а также росту цен из-за отсутствия должного конкурентного предложения на потребительском рынке в среднесрочной перспективе.
+
+					</p>
+				</div>
+		        <div class="autor-line-blok-1">Автор: Петя</div>
+				<div class="date-line-blok-1">26.02.2017</div>
+	        </div>
+        </article>
+    </template>
+
 		<div class="reclama-blok right">
 
 			<div class="reclama-blok-1 right">		
@@ -241,22 +501,7 @@
 		<p>25.02.2017г</p>
 
 	</div>
-	   <!-- templates -->
-    <template id="template-article-list-item">
-        <div class="article-list-item" data-id="id">
-            <h3 class="article-list-item-title">
-                Заголовок статьи
-            </h3>
-            <p class="article-list-item-summary">
-                Краткое описание для статьи. 
-            </p>
-            <div class="article-list-item-meta">
-                <span>Автор: <span class="article-list-item-author">Автор</span></span>
-                <span>Опубликована: <span class="article-list-item-date">12.12.1995 04:35</span></span>
-            </div>
-        </div>
-    </template>
-
+	
 
 
 <script src="js/script.js"></script>    
